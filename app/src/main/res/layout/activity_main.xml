@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/img">
+
+    <ImageView
+        android:id="@+id/inventory_logo"
+        android:layout_width="315dp"
+        android:layout_height="206dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/my_logo" />
 
     <TextView
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@+id/inventory_logo"
+        android:layout_centerHorizontal="true"
+        android:text="@string/let_s_get_started"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/LoginButtonMain"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-55dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_person_login"
+        android:hint="Login"
+        android:onClick="login"
+        android:textColorHint="#ffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/SignUpMain"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@+id/LoginButtonMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="-62dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_person_register"
+        android:hint="Register"
+        android:onClick="register"
+        android:textColorHint="#FFFF"
+        android:textSize="20sp" />
+
+</RelativeLayout>
